@@ -91,7 +91,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
         $.ajax({
           url: URL_API,
-          type: 'POST',
+          type: 'GET',
           data: formData,
           processData: false,
           contentType: false,
