@@ -84,10 +84,10 @@ if (navigator.mediaDevices.getUserMedia) {
       }
 
       sendButton.onclick = function(e){
-        var formData = new FormData();
+        const formData = new FormData();
         formData.append('blob', blob, 'audio.wav');
-        
-        var URL_API = "http://localhost:8080/api/upload-audio"
+
+        const URL_API = "https://audio-recording-converter-production.up.railway.app/api/upload-audio";
 
         $.ajax({
           url: URL_API,
