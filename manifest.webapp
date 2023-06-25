@@ -1,0 +1,9 @@
+{
+  "version": "0.1",
+  "name": "audio-form",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "app-icons/icon-60.png",
+    "128": "app-icons/icon-128.png"
+  }
+}
