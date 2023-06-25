@@ -85,19 +85,20 @@ if (navigator.mediaDevices.getUserMedia) {
 
       sendButton.onclick = function(e){
         const formData = new FormData();
-        formData.append('blob', blob, 'audio.wav');
+        formData.append('blob', blob);
 
-        const URL_API = "https://audio-recording-converter-production.up.railway.app/api/upload-audio";
+        const URL_API = "http://audio-recording-converter-production.up.railway.app/api/upload-audio";
 
         $.ajax({
           url: URL_API,
           type: 'GET',
           data: formData,
+          enctype: 'multipart/form-data',
           processData: false,
-          contentType: false,
-          xhrFields: {
+          contentType : false,
+         /* xhrFields: {
             responseType: 'blob'
-          },
+          },*/
           success: function(response, textStatus, xhr) {
             const blob = response;
             const url = URL.createObjectURL(blob);
